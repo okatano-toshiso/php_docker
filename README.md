@@ -14,4 +14,3 @@ git clone this hub.
 
 docker-compose up -d
 
-# php_docker
