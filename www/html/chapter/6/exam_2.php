@@ -13,4 +13,8 @@ class Ingredient {
     public function getCost() {
         return $this->cost;
     }
+    // このメソッドは費用を新しい値に設定する
+    public function setCost($cost) {
+    $this->cost = $cost;
+    }
 }
