@@ -13,5 +13,4 @@ if (isset($_COOKIE['last_access'])) {
 } else {
     $msg = '<p>This is your first visit to this page.</p>';
 }
-
 print $msg;
