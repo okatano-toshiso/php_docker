@@ -1,15 +1,26 @@
-# PHP 7.4 version
-ωCurrently this project consists of:
+# LAMP
+`PHPとWEBサーバ、mysql構築用のDockerファイル`
 
-- nginx:latest
-- PHP 7.4
-- phpmyadmin:latest
-- mysql:5.7
+| apri |  name  | version  |
+| :---: | :---: | :---: |
+| lang | PHP | 7.4 |
+| WEB | nginx | latest |
+| DB |  mysql | latest  |
 
-# START
-
-please
-git clone this hub.
-
-docker-compose up -d
-
+## START
+### BUILD
+```
+docker-compose build
+```
+### UP
+```
+docker-compose up
+```
+### DOWN
+```
+docker-compose down
+```
+### STATUS
+```
+docker-compose ps
+```
