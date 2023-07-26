@@ -1,9 +1,8 @@
-# PHP 7.2 version
-ああああ
-Currently this project consists of:
+# PHP 7.4 version
+ωCurrently this project consists of:
 
 - nginx:latest
-- PHP 7.2
+- PHP 7.4
 - phpmyadmin:latest
 - mysql:5.7
 

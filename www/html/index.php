@@ -1,4 +1,2 @@
-aaa
-
 <?php
 phpinfo();
