@@ -1,15 +1,20 @@
-# PHP 7.4イメージをベースにする
-FROM php:7.4-fpm
-
-# 必要なパッケージをインストールする
-RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
+FROM php:8.2-fpm
+RUN apt-get update \
+    && apt-get install -y \
+    git \
     zip \
     unzip \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql
+    vim \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libmcrypt-dev \
+    libpng-dev \
+    libfontconfig1 \
+    libxrender1
 
-# コンテナ内に作業ディレクトリを作成する（任意のディレクトリを指定可能）
-WORKDIR /var/www/html
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+RUN docker-php-ext-install gd
+RUN docker-php-ext-install bcmath
+RUN docker-php-ext-install pdo_mysql mysqli exif
+RUN cd /usr/bin && curl -s http://getcomposer.org/installer | php && ln -s /usr/bin/composer.phar /usr/bin/composer
+
