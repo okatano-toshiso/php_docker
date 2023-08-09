@@ -3,7 +3,7 @@
 
 | apri |  name  | version  |
 | :---: | :---: | :---: |
-| lang | PHP | 7.4 |
+| lang | PHP | 8.2 |
 | WEB | nginx | latest |
 | DB |  mysql | latest  |
 
